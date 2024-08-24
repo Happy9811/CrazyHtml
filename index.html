@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Falling Crypto Icons Animation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background: radial-gradient(circle, #752c0f, #000000 70%); /* Radial gradient from light orange to black */
+            overflow: hidden;
+        }
+        .coin {
+            position: absolute;
+            font-size: 100px; /* Increased font size for larger icons */
+            animation: fall linear infinite, sway ease-in-out infinite;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        @keyframes fall {
+            0% {
+                top: -10%;
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            100% {
+                top: 110%;
+                opacity: 1;
+            }
+        }
+        @keyframes sway {
+            0% {
+                margin-left: 0;
+            }
+            25% {
+                margin-left: 50px;
+            }
+            50% {
+                margin-left: -50px;
+            }
+            75% {
+                margin-left: 50px;
+            }
+            100% {
+                margin-left: 0;
+            }
+        }
+        .front-image {
+            position: absolute;
+            z-index: 3;
+            width: 100%;
+            height: 100%;
+            background-image: url('store.png');
+            background-size: cover;
+            background-position: center;
+            opacity: 1; /* Adjust the opacity as desired */
+            
+        }
+
+        .background {
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            background-image: url('background.png');
+            background-size: cover;
+            background-position: center;
+            opacity: 1; /* Adjust the opacity as desired */
+            
+        }
+
+        .falling {
+            position: absolute;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            background-image: url('falling.gif');
+            background-size: cover;
+            background-position: center;
+            opacity: 1; /* Adjust the opacity as desired */
+            
+        }
+
+        
+
+        /* Desktop styles */
+        @media screen and (min-width: 1100px) {
+
+            .box1_img{
+                text-align: center;
+                padding-top: 20px;
+            }
+            .box1 {
+                top: 100px;
+                left: 20%;
+                width: 60%;
+                height: 700px;
+                z-index: 5;
+                background-color: rgba(0,0,0, 0.7);
+                position: absolute;
+                border-radius: 15px;
+                border: 5px solid rgb(180, 16, 16);
+                min-width: 400px;
+            }
+            .box2 {
+                top: 840px;
+                left: 20%;
+                width: 60%;
+                height: 60px;
+                z-index: 5;
+                background-color: rgba(0,0,0, 0.7);
+                position: absolute;
+                border-radius: 15px;
+                border: 5px solid rgb(180, 16, 16);
+                min-width: 400px;
+            }
+            
+            .box1_box1{
+                margin-left: 60px;
+                margin-right: 60px;
+                display: flex; /* Enables flexbox layout */
+                justify-content: space-between; /* Distributes space between items */
+                align-items: center; /* Aligns items vertically in the center */
+            }
+
+            .box1_box2{
+                width: 170px;
+                display: flex; /* Enables flexbox layout */
+                margin: auto;
+                margin-top: -20px;
+            }
+
+            .box1_box3{
+                display: none;
+            }
+
+            .flex-item {
+                background: linear-gradient(rgba(216, 20, 20, 0.3), rgba(22, 5, 5, 0.8));
+                width: 100%;
+                height: 150px;
+                padding: 10px; /* Inner spacing */
+                margin: 30px;
+                border: 3px solid #e21414; /* Border for visibility */
+                border-radius: 15px;
+                text-align: center;
+                color: white;
+            }
+
+            .title{
+                font-size: 25px;
+                font-weight: bold;
+                margin-bottom: 20px;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+            .content{
+                font-size: 18px;
+            }
+
+            .flex-item-social{
+                background-color: rgba(216, 20, 20, 0.8);
+                width: 30px;
+                height: 30px;
+                padding: 10px; /* Inner spacing */
+                margin: 15px;
+                border: 5px solid black; /* Border for visibility */
+                border-radius: 10px;
+                text-align: center;
+                color: white;
+                font-size: 30px;
+            }
+
+            .copy-button{
+                font-size: 40px;
+                color: white;
+                margin: 7px;
+                right: 5px;
+                top: 0px;
+                position: absolute;
+            }
+
+            .address{
+                font-size: 30px;
+                color: white;
+                text-align: center;
+                margin: 10px;
+            }
+
+        }
+
+        /* Tablet styles */
+        @media screen and (max-width: 1100px) {
+            .box1_img{
+                text-align: center;
+                padding-top: 0px;
+                transform: scale(0.7, 0.7);
+            }
+            .box1 {
+                top: 30px;
+                left: 20%;
+                width: 60%;
+                height: 800px;
+                z-index: 5;
+                background-color: rgba(0,0,0, 0.7);
+                position: absolute;
+                border-radius: 15px;
+                border: 5px solid rgb(180, 16, 16);
+                min-width: 300px;
+            }
+            .box2 {
+                top: 840px;
+                left: 20%;
+                width: 60%;
+                height: 60px;
+                z-index: 5;
+                background-color: rgba(0,0,0, 0.7);
+                position: absolute;
+                border-radius: 15px;
+                border: 5px solid rgb(180, 16, 16);
+                min-width: 300px;
+            }
+            .box1_box1{
+                margin-left: 30px;
+                margin-right: 30px;
+            }
+
+            .box1_box3{
+                width: 170px;
+                display: flex; /* Enables flexbox layout */
+                margin: auto;
+                margin-top: -10px;
+            }
+
+            .box1_box2{
+                display: none;
+            }
+
+            .flex-item {
+                background: linear-gradient(rgba(216, 20, 20, 0.3), rgba(22, 5, 5, 0.8));
+                height: 100px;
+                padding: 10px; /* Inner spacing */
+                margin: 20px;
+                border: 3px solid #e21414; /* Border for visibility */
+                border-radius: 15px;
+                text-align: center;
+                color: white;
+            }
+
+            .title{
+                font-size: 17px;
+                font-weight: bold;
+                margin-bottom: 20px;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+            .content{
+                font-size: 14px;
+            }
+
+            .flex-item-social{
+                background-color: rgba(216, 20, 20, 0.8);
+                width: 20px;
+                height: 20px;
+                padding: 10px; /* Inner spacing */
+                margin: 5px 15px 5px 15px;
+                border: 5px solid black; /* Border for visibility */
+                border-radius: 10px;
+                text-align: center;
+                color: white;
+                font-size: 20px;
+            }
+
+            .copy-button{
+                font-size: 25px;
+                color: white;
+                margin: 15px;
+                right: 5px;
+                top: 0px;
+                position: absolute;
+            }
+
+            .address{
+                font-size: 17px;
+                color: white;
+                text-align: center;
+                margin: 20px;
+            }
+
+        }
+
+    </style>
+<script src="https://kit.fontawesome.com/68ce4db7f8.js" crossorigin="anonymous"></script>
+<script>
+    
+document.addEventListener('DOMContentLoaded', function() {
+    const copyButton = document.getElementById('copyButton');
+    const textToCopy = document.getElementById('textToCopy');
+
+    copyButton.addEventListener('click', function() {
+        // Create a temporary textarea element
+        const tempTextArea = document.createElement('textarea');
+        // Set its value to the text we want to copy
+        tempTextArea.value = textToCopy.textContent;
+        // Append it to the body
+        document.body.appendChild(tempTextArea);
+        // Select the text
+        tempTextArea.select();
+        // Copy the selected text
+        document.execCommand('copy');
+        // Remove the temporary element
+        document.body.removeChild(tempTextArea);
+
+        // Optional: Provide user feedback
+        alert(tempTextArea.value);
+    });
+});
+
+</script>
+</head>
+<body>
+    <script>
+        // const coins = [
+        //     { icon: 'fa-bitcoin', prefix: 'fab' },
+        //     { icon: 'fa-ethereum', prefix: 'fab' },
+        //     { icon: 'fa-litecoin', prefix: 'fab' },
+        //     { icon: 'fa-dollar-sign', prefix: 'fas' },
+        //     { icon: 'fa-pound-sign', prefix: 'fas' },
+        //     { icon: 'fa-euro-sign', prefix: 'fas' },
+        //     { icon: 'fa-yen-sign', prefix: 'fas' },
+        //     { icon: 'fa-ruble-sign', prefix: 'fas' }
+        // ];
+
+        // function createCoin() {
+        //     const coin = document.createElement('i');
+        //     const randomCoin = coins[Math.floor(Math.random() * coins.length)];
+        //     coin.classList.add(randomCoin.prefix, randomCoin.icon, 'coin');
+        //     coin.style.left = Math.random() * window.innerWidth + 'px';
+            
+        //     const fallDuration = Math.random() * 8 + 7; // Random fall duration between 7 and 15 seconds
+        //     const swayDuration = fallDuration / 2; // Sway duration is half of fall duration
+            
+        //     coin.style.animationDuration = `${fallDuration}s, ${swayDuration}s`;
+            
+        //     document.body.appendChild(coin);
+            
+        //     setTimeout(() => {
+        //         coin.remove();
+        //     }, fallDuration * 1000); // Remove coin after it has fallen
+        // }
+
+        // setInterval(createCoin, 50); // Create a new coin every 300 milliseconds
+    </script>
+    <div class="background"></div>
+    <div class="falling"></div>
+    <div class="front-image"></div>
+    <div class="box1">
+        <div class="box1_img">
+            <img src="chicken.png">
+        </div>
+        <div class="box1_box3">
+            <div class="flex-item-social"><a href="https://google.com" style="color: white;"><i class="fa-brands fa-x-twitter"></i></a></div>
+            <div class="flex-item-social"><a href="https://google.com" style="color: white;"><i class="fab fa-telegram"></i></a></div>
+        </div>
+        <div class="box1_box1">
+            <div class="flex-item">
+                <div class="title">
+                    PHASE1: WEB APP
+                </div>
+                <div class="content">
+                    This web app will display the top jeets and how much they've lost because they jeet'd.
+                </div>
+            </div>
+            <div class="flex-item">
+                <div class="title">
+                    PHASE 2: Telegram Bot
+                </div>
+                <div class="content">
+                    Our bot will be added to every crypto channel and shame any jeets - encouraging holders.
+                </div>
+            </div>
+        </div>
+        <div class="box1_box1">
+            <div class="flex-item">
+                <div class="title">
+                    PHASE 3: Jeet-Free Swap
+                </div>
+                <div class="content">
+                    We will develop a swap that blocks jeet addresses.
+                </div>
+            </div>
+            <div class="flex-item">
+                <div class="title">
+                    PHASE 4: Jeets Enter Hell
+                </div>
+                <div class="content">
+                    No more jeets = coin go up.
+                </div>
+            </div>
+        </div>
+        <div class="box1_box2">
+            <div class="flex-item-social"><a href="https://google.com" style="color: white;"><i class="fa-brands fa-x-twitter"></i></a></div>
+            <div class="flex-item-social"><a href="https://google.com" style="color: white;"><i class="fab fa-telegram"></i></a></div>
+        </div>
+    </div>
+    <div class="box2">
+        <div class="address" id="textToCopy">abc0923....4567qwert09876</div>
+        <i class="fa-regular fa-copy copy-button" id="copyButton"></i>
+    </div>
+</body>
+</html>
